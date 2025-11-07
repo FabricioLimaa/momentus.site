@@ -1,15 +1,23 @@
 import z from "zod";
 
 /**
- * Types shared between the client and server go here.
- *
- * For example, we can add zod schemas for API input validation, and derive types from them:
- *
- * export const TodoSchema = z.object({
- *   id: z.number(),
- *   name: z.string(),
- *   completed: z.number().int(), // 0 or 1
- * })
- *
- * export type TodoType = z.infer<typeof TodoSchema>;
+ * Tipos compartilhados entre o cliente e o servidor.
  */
+
+// Esquema para os dados de screenshots
+export const ScreenshotSchema = z.object({
+  url: z.string().url(),
+  title: z.string(),
+  description: z.string(),
+});
+
+export type ScreenshotType = z.infer<typeof ScreenshotSchema>;
+
+// Esquema para os dados de features
+export const FeatureSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  gradient: z.string(),
+});
+
+export type FeatureType = z.infer<typeof FeatureSchema>;

@@ -1,4 +1,6 @@
-const screenshots = [
+import type { ScreenshotType } from '../../shared/types';
+
+const screenshots: ScreenshotType[] = [
   {
     url: 'https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/01-login.png',
     title: 'Login Simplificado',
@@ -42,9 +44,9 @@ export default function Screenshots() {
 
         {/* Screenshots carousel */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {screenshots.map((screenshot, index) => (
+          {screenshots.map((screenshot) => (
             <div 
-              key={index}
+              key={screenshot.url}
               className="group relative"
             >
               {/* Phone frame */}

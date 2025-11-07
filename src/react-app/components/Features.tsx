@@ -1,6 +1,7 @@
-import { Calendar, Target, Trophy, Bell, Layout, Sparkles } from 'lucide-react';
+import { Calendar, Target, Trophy, Bell, Layout, Sparkles, type LucideIcon } from 'lucide-react';
+import type { FeatureType } from '../../shared/types';
 
-const features = [
+const features: (FeatureType & { icon: LucideIcon })[] = [
   {
     icon: Layout,
     title: 'Templates de Rotinas',
@@ -55,9 +56,9 @@ export default function Features() {
 
         {/* Features grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <div 
-              key={index}
+              key={feature.title}
               className="group relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:bg-white/10 hover:border-emerald-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
             >
               {/* Icon */}
