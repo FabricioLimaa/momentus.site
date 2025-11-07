@@ -39,7 +39,6 @@
   "cf-typegen": "wrangler types",
   "check": "tsc && vite build && wrangler deploy --dry-run",
   "dev": "vite",
-  "lint": "eslint .",
-  "postinstall": "patch-package"
+  "lint": "eslint ."
   }
 }
