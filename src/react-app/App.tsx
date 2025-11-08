@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ThemeToggle from "@/react-app/components/ThemeToggle";
 
 // Lazy load pages
 const HomePage = lazy(() => import("@/react-app/pages/Home"));
@@ -14,6 +15,7 @@ export default function App() {
   return (
     <Router>
       <Suspense fallback={<div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">Loading...</div>}>
+        <ThemeToggle />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

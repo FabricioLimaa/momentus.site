@@ -24,7 +24,7 @@ const ThemeToggle: React.FC = () => {
   };
 
   return (
-    <button onClick={toggleTheme} className="p-2 rounded-full bg-primary-light dark:bg-primary-dark text-highlight-light dark:text-highlight-dark">
+    <button onClick={toggleTheme} className="fixed bottom-4 right-4 z-50 p-2 rounded-full bg-primary-light dark:bg-primary-dark text-highlight-light dark:text-highlight-dark">
       {isDarkMode ? <Sun size={24} /> : <Moon size={24} />}
     </button>
   );

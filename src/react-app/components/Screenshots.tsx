@@ -47,6 +47,7 @@ const screenshots: ScreenshotType[] = [
       url: '/assets/image/claro/03-new-event-claro-400.webp',
       srcset: [
         '/assets/image/claro/03-new-event-claro-400.webp 400w',
+        '/assets/image/claro/03-new-event-claro-800.webp 800w',
         '/assets/image/claro/03-new-event-claro-1200.webp 1200w',
       ],
     },
@@ -54,6 +55,7 @@ const screenshots: ScreenshotType[] = [
       url: '/assets/image/escuro/03-new-event-escuro-400.webp',
       srcset: [
         '/assets/image/escuro/03-new-event-escuro-400.webp 400w',
+        '/assets/image/escuro/03-new-event-escuro-800.webp 800w',
         '/assets/image/escuro/03-new-event-escuro-1200.webp 1200w',
       ],
     },
