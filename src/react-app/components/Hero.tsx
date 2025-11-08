@@ -15,9 +15,13 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute inset-0 bg-emerald-400/20 blur-2xl rounded-full"></div>
             <img 
-              src="https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/app_logo.png" 
+              src="https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/app_logo.webp" 
               alt="Momentus Logo" 
               className="relative w-32 h-32 rounded-full shadow-2xl"
+              loading="eager"
+              fetchpriority="high"
+              width="128"
+              height="128"
             />
           </div>
         </div>
@@ -42,6 +46,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
           <a 
             href="#download" 
+            aria-label="Baixar o aplicativo Momentus no Google Play"
             className="group relative px-12 py-5 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-lg font-bold rounded-full shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105 overflow-hidden"
           >
             <span className="relative z-10">Baixar no Google Play</span>
@@ -49,6 +54,7 @@ export default function Hero() {
           </a>
           <a 
             href="#features" 
+            aria-label="Ver as funcionalidades do aplicativo Momentus"
             className="px-12 py-5 bg-white/10 backdrop-blur-sm text-white text-lg font-semibold rounded-full border-2 border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
           >
             Ver Funcionalidades

@@ -2,22 +2,22 @@ import type { ScreenshotType } from '../../shared/types';
 
 const screenshots: ScreenshotType[] = [
   {
-    url: 'https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/01-login.png',
+    url: 'https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/01-login.webp',
     title: 'Login Simplificado',
     description: 'Entre facilmente com Google ou e-mail'
   },
   {
-    url: 'https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/03-calendar.png',
+    url: 'https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/03-calendar.webp',
     title: 'Calendário Completo',
     description: 'Visualize todos seus eventos em um só lugar'
   },
   {
-    url: 'https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/04-new-event.png',
+    url: 'https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/04-new-event.webp',
     title: 'Criar Eventos',
     description: 'Adicione eventos com categorias personalizadas'
   },
   {
-    url: 'https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/10-.png',
+    url: 'https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/10-.webp',
     title: 'Conquistas',
     description: 'Acompanhe seu progresso e desbloqueie prêmios'
   }
@@ -57,6 +57,9 @@ export default function Screenshots() {
                     src={screenshot.url} 
                     alt={screenshot.title}
                     className="w-full h-auto"
+                    loading="lazy"
+                    width="348"
+                    height="754"
                   />
                   {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">

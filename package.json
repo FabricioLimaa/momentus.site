@@ -10,6 +10,7 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-router": "7.5.3",
+    "react-router-dom": "^7.9.5",
     "zod": "3.24.3"
   },
   "devDependencies": {
@@ -35,10 +36,10 @@
     "wrangler": "4.33.0"
   },
   "scripts": {
-  "build": "vite build",
-  "cf-typegen": "wrangler types",
-  "check": "tsc && vite build && wrangler deploy --dry-run",
-  "dev": "vite",
-  "lint": "eslint ."
+    "build": "vite build",
+    "cf-typegen": "wrangler types",
+    "check": "tsc && vite build && wrangler deploy --dry-run",
+    "dev": "vite",
+    "lint": "eslint ."
   }
 }
