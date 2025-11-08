@@ -1,0 +1,79 @@
+[PORTUGUÊS-BR]
+
+POLÍTICA DE PRIVACIDADE
+
+Última atualização: 03 de Novembro de 2025
+
+Esta Política de Privacidade descreve como o aplicativo Momentus ("nós", "nosso" ou "o aplicativo"), desenvolvido por Fabricio Lima, coleta, usa e protege suas informações quando você utiliza nosso serviço. O tratamento de seus dados é realizado em conformidade com a Lei Geral de Proteção de Dados Pessoais do Brasil (LGPD).
+
+1. Controlador dos Dados
+O controlador dos seus dados pessoais é Fabricio Lima.
+
+2. Dados que Coletamos
+Coletamos as seguintes categorias de dados:
+
+a) Dados Fornecidos por Você:
+   - Informações da Conta Google: Nome, e-mail e foto de perfil.
+
+b) Dados Gerados Durante o Uso:
+   - Suas Rotinas e Eventos: Títulos, descrições, horários, categorias, etc.
+   - Dados de Gamificação: Pontos, conquistas e sequência de uso (streak).
+
+c) Dados de Serviços de Terceiros:
+   - Dados do Google Calendar: Apenas com sua autorização, para exibir eventos e evitar duplicatas.
+
+3. Como Usamos Seus Dados
+Usamos seus dados estritamente para:
+- Fornecer a funcionalidade do aplicativo: Autenticação, salvamento de dados, exibição de progresso e widgets.
+- Sincronização na Nuvem: Para manter seus dados sincronizados entre dispositivos.
+- Integração com a Agenda Google: Para ler e criar eventos, conforme sua solicitação.
+
+4. Compartilhamento e Armazenamento de Dados
+NÃO vendemos ou alugamos seus dados. Seus dados são compartilhados apenas com a infraestrutura do Google (Firebase, Google Cloud) para fins de autenticação, armazenamento e integração com a agenda.
+
+5. Seus Direitos (LGPD)
+Você tem o direito de acessar, corrigir e eliminar seus dados. Para exercer esses direitos, entre em contato pelo e-mail: [fabriciodacostalima@gmail.com]. A exclusão da sua conta no aplicativo removerá todos os seus dados.
+
+6. Alterações a Esta Política
+Podemos atualizar esta política periodicamente. Notificaremos sobre quaisquer alterações publicando a nova versão nesta página.
+
+----------------------------------------------------
+
+[ENGLISH]
+
+PRIVACY POLICY
+
+Last updated: November 03, 2025
+
+This Privacy Policy describes how the Momentus app, developed by Fabricio Lima, collects, uses, and protects your information.
+
+1. Data Controller
+The controller of your personal data is Fabricio Lima.
+
+2. Data We Collect
+We collect the following data:
+
+a) Data Provided by You:
+   - Google Account Information: Name, email, and profile picture.
+
+b) Data Generated During Use:
+   - Your Routines and Events: Titles, descriptions, times, categories, etc.
+   - Gamification Data: Points, achievements, and usage streak.
+
+c) Data from Third-Party Services:
+   - Google Calendar Data: Only with your permission, to display events and prevent duplicates.
+
+3. How We Use Your Data
+We use your data strictly to:
+- Provide the app's functionality: Authentication, data saving, progress display, and widgets.
+- Cloud Synchronization: To keep your data synced across devices.
+- Google Calendar Integration: To read and create events, as requested by you.
+
+4. Data Sharing and Storage
+We DO NOT sell or rent your data. Your data is shared only with Google's infrastructure (Firebase, Google Cloud) for authentication, storage, and calendar integration.
+
+5. Your Rights
+You have the right to access, correct, and delete your data. To exercise these rights, contact us at: [fabriciodacostalima@gmail.com]. Deleting your in-app account will remove all your data.
+
+6. Changes to This Policy
+We may update this policy periodically. We will notify you of any changes by posting the new version on this page.

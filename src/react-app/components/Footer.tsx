@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -31,6 +33,15 @@ export default function Footer() {
             <a href="#download" className="hover:text-emerald-400 transition-colors duration-300">
               Download
             </a>
+            <Link to="/privacy-policy" className="hover:text-emerald-400 transition-colors duration-300">
+              Política de Privacidade
+            </Link>
+            <Link to="/terms" className="hover:text-emerald-400 transition-colors duration-300">
+              Termos e Condições
+            </Link>
+            <Link to="/license" className="hover:text-emerald-400 transition-colors duration-300">
+              Licença
+            </Link>
             <a href="mailto:contato@momentus.app" className="hover:text-emerald-400 transition-colors duration-300">
               Contato
             </a>
