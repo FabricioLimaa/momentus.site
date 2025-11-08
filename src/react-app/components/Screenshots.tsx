@@ -2,22 +2,41 @@ import type { ScreenshotType } from '../../shared/types';
 
 const screenshots: ScreenshotType[] = [
   {
-    url: 'https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/01-login.webp',
+    url: '/assets/image/01-login-400.webp',
+    srcset: [
+      '/assets/image/01-login-400.webp 400w',
+      '/assets/image/01-login-800.webp 800w',
+      '/assets/image/01-login-1200.webp 1200w',
+    ],
     title: 'Login Simplificado',
     description: 'Entre facilmente com Google ou e-mail'
   },
   {
-    url: 'https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/03-calendar.webp',
+    url: '/assets/image/02-calendar-400.webp',
+    srcset: [
+      '/assets/image/02-calendar-400.webp 400w',
+      '/assets/image/02-calendar-800.webp 800w',
+      '/assets/image/02-calendar-1200.webp 1200w',
+    ],
     title: 'Calendário Completo',
     description: 'Visualize todos seus eventos em um só lugar'
   },
   {
-    url: 'https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/04-new-event.webp',
+    url: '/assets/image/03-new-event-400.webp',
+    srcset: [
+      '/assets/image/03-new-event-400.webp 400w',
+      '/assets/image/03-new-event-1200.webp 1200w',
+    ],
     title: 'Criar Eventos',
     description: 'Adicione eventos com categorias personalizadas'
   },
   {
-    url: 'https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/10-.webp',
+    url: '/assets/image/04-achievements-400.webp',
+    srcset: [
+      '/assets/image/04-achievements-400.webp 400w',
+      '/assets/image/04-achievements-800.webp 800w',
+      '/assets/image/04-achievements-1200.webp 1200w',
+    ],
     title: 'Conquistas',
     description: 'Acompanhe seu progresso e desbloqueie prêmios'
   }
@@ -55,6 +74,8 @@ export default function Screenshots() {
                 <div className="relative rounded-[2.5rem] overflow-hidden bg-black">
                   <img 
                     src={screenshot.url} 
+                    srcSet={screenshot.srcset?.join(', ')}
+                    sizes="(max-width: 348px) 100vw, 348px"
                     alt={screenshot.title}
                     className="w-full h-auto"
                     loading="lazy"

@@ -15,7 +15,13 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute inset-0 bg-emerald-400/20 blur-2xl rounded-full"></div>
             <img 
-              src="https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/app_logo.webp" 
+              src="/assets/image/05-logo-fundo-escuro-400.webp"
+              srcset="
+                /assets/image/05-logo-fundo-escuro-400.webp 400w,
+                /assets/image/05-logo-fundo-escuro-800.webp 800w,
+                /assets/image/05-logo-fundo-escuro-1000.webp 1000w
+              "
+              sizes="(max-width: 128px) 100vw, 128px"
               alt="Momentus Logo" 
               className="relative w-32 h-32 rounded-full shadow-2xl"
               loading="eager"
