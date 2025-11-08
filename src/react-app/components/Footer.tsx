@@ -9,9 +9,14 @@ export default function Footer() {
           <div className="text-center md:text-left">
             <div className="flex items-center gap-3 justify-center md:justify-start mb-2">
               <img 
-                src="https://mocha-cdn.com/019a5f62-1bf7-7b03-b5ba-9712744a0167/app_logo.png" 
+                src="/assets/image/05-logo-fundo-escuro-400.webp"
+                srcSet="/assets/image/05-logo-fundo-escuro-400.webp 400w, /assets/image/05-logo-fundo-escuro-800.webp 800w, /assets/image/05-logo-fundo-escuro-1000.webp 1000w"
+                sizes="2.5rem"
                 alt="Momentus" 
                 className="w-10 h-10 rounded-full"
+                loading="lazy"
+                width="40"
+                height="40"
               />
               <span className="text-2xl font-bold text-white">Momentus</span>
             </div>
