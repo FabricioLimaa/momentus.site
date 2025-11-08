@@ -44,19 +44,19 @@ const screenshots: ScreenshotType[] = [
 
 export default function Screenshots() {
   return (
-    <section className="relative py-32 px-6 overflow-hidden">
+    <section className="relative py-32 px-6 overflow-hidden bg-primary-light dark:bg-primary-dark">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-emerald-500/5 to-transparent"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-accent-light/5 to-transparent dark:from-accent-dark/5"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
+          <h2 className="text-5xl md:text-6xl font-black text-highlight-light dark:text-highlight-dark mb-6">
             Veja o Momentus em Ação
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-500 dark:text-gray-300 max-w-3xl mx-auto">
             Interface intuitiva e moderna projetada para máxima produtividade
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function Screenshots() {
               className="group relative"
             >
               {/* Phone frame */}
-              <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-[3rem] p-3 shadow-2xl hover:shadow-emerald-500/20 transition-all duration-500 hover:scale-105">
+              <div className="relative bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-900 rounded-[3rem] p-3 shadow-2xl hover:shadow-accent-light/20 dark:hover:shadow-accent-dark/20 transition-all duration-500 hover:scale-105">
                 {/* Screen */}
                 <div className="relative rounded-[2.5rem] overflow-hidden bg-black">
                   <img 
@@ -93,7 +93,7 @@ export default function Screenshots() {
               </div>
 
               {/* Glow effect */}
-              <div className="absolute inset-0 -z-10 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
+              <div className="absolute inset-0 -z-10 bg-gradient-to-br from-accent-light/20 to-secondary-light/20 dark:from-accent-dark/20 dark:to-secondary-dark/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
             </div>
           ))}
         </div>

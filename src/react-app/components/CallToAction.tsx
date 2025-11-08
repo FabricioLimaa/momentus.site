@@ -2,9 +2,9 @@ import { Smartphone, Star } from 'lucide-react';
 
 export default function CallToAction() {
   return (
-    <section id="download" className="relative py-32 px-6">
+    <section id="download" className="relative py-32 px-6 bg-primary-light dark:bg-primary-dark">
       <div className="max-w-5xl mx-auto">
-        <div className="relative bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-[3rem] p-12 md:p-16 shadow-2xl overflow-hidden">
+        <div className="relative bg-gradient-to-br from-accent-light to-secondary-light dark:from-accent-dark dark:to-secondary-dark rounded-[3rem] p-12 md:p-16 shadow-2xl overflow-hidden">
           {/* Background pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -23,7 +23,7 @@ export default function CallToAction() {
             </h2>
 
             {/* Description */}
-            <p className="text-xl text-emerald-50 mb-10 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-100 dark:text-gray-200 mb-10 max-w-2xl mx-auto">
               Junte-se a milhares de usuários que já estão alcançando seus objetivos com o Momentus
             </p>
 
@@ -41,11 +41,11 @@ export default function CallToAction() {
               </div>
               <div className="text-center">
                 <p className="text-4xl font-black text-white mb-2">10k+</p>
-                <p className="text-emerald-50">Downloads</p>
+                <p className="text-gray-100 dark:text-gray-200">Downloads</p>
               </div>
               <div className="text-center">
                 <p className="text-4xl font-black text-white mb-2">95%</p>
-                <p className="text-emerald-50">Satisfação</p>
+                <p className="text-gray-100 dark:text-gray-200">Satisfação</p>
               </div>
             </div>
 
@@ -54,7 +54,7 @@ export default function CallToAction() {
               href="https://play.google.com" 
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-12 py-6 bg-white text-emerald-600 text-xl font-bold rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center gap-3 px-12 py-6 bg-white text-accent-light dark:text-accent-dark text-xl font-bold rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
@@ -62,7 +62,7 @@ export default function CallToAction() {
               Disponível no Google Play
             </a>
 
-            <p className="text-emerald-100 mt-6">Versão Android • Gratuito</p>
+            <p className="text-gray-100 dark:text-gray-200 mt-6">Versão Android • Gratuito</p>
           </div>
         </div>
       </div>

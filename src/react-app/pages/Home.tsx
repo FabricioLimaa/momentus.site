@@ -6,7 +6,7 @@ import Footer from '@/react-app/components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0A1F44] via-[#0F2D5C] to-[#0A1F44]">
+    <div className="min-h-screen">
       <Hero />
       <Features />
       <Screenshots />
