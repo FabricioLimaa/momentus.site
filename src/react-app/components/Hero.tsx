@@ -1,22 +1,9 @@
 import { ArrowDown } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
-import { useEffect, useState } from 'react';
+import { useTheme } from '../hooks/useTheme';
 
 export default function Hero() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    const theme = localStorage.getItem("theme");
-    if (theme === "dark") {
-      setIsDarkMode(true);
-    }
-    // Listen for changes to the theme
-    const observer = new MutationObserver(() => {
-      setIsDarkMode(document.documentElement.classList.contains('dark'));
-    });
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
+  const theme = useTheme();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
@@ -35,15 +22,15 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute inset-0 bg-accent-light/20 dark:bg-accent-dark/20 blur-2xl rounded-full"></div>
             <img 
-              src={isDarkMode ? "/assets/image/05-logo-fundo-escuro-400.webp" : "/assets/image/06-logo-fundo-claro-400.webp"}
-              srcSet={isDarkMode ? `
-                /assets/image/05-logo-fundo-escuro-400.webp 400w,
-                /assets/image/05-logo-fundo-escuro-800.webp 800w,
-                /assets/image/05-logo-fundo-escuro-1000.webp 1000w
+              src={theme === 'dark' ? "/assets/image/escuro/05-logo-fundo-escuro-400.webp" : "/assets/image/claro/06-logo-fundo-claro-400.webp"}
+              srcSet={theme === 'dark' ? `
+                /assets/image/escuro/05-logo-fundo-escuro-400.webp 400w,
+                /assets/image/escuro/05-logo-fundo-escuro-800.webp 800w,
+                /assets/image/escuro/05-logo-fundo-escuro-1000.webp 1000w
               ` : `
-                /assets/image/06-logo-fundo-claro-400.webp 400w,
-                /assets/image/06-logo-fundo-claro-800.webp 800w,
-                /assets/image/06-logo-fundo-claro-1000.webp 1000w
+                /assets/image/claro/06-logo-fundo-claro-400.webp 400w,
+                /assets/image/claro/06-logo-fundo-claro-800.webp 800w,
+                /assets/image/claro/06-logo-fundo-claro-1000.webp 1000w
               `}
               sizes="(max-width: 128px) 100vw, 128px"
               alt="Momentus Logo" 

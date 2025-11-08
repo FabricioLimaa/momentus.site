@@ -6,7 +6,14 @@ import z from "zod";
 
 // Esquema para os dados de screenshots
 export const ScreenshotSchema = z.object({
-  url: z.string().url(),
+  light: z.object({
+    url: z.string(),
+    srcset: z.array(z.string()),
+  }),
+  dark: z.object({
+    url: z.string(),
+    srcset: z.array(z.string()),
+  }),
   title: z.string(),
   description: z.string(),
 });
