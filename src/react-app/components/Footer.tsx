@@ -13,11 +13,11 @@ export default function Footer() {
           <div className="text-center md:text-left">
             <div className="flex items-center gap-3 justify-center md:justify-start mb-2">
               <img 
-                src={theme === 'dark' ? "/assets/image/escuro/05-logo-fundo-escuro-400.webp" : "/assets/image/claro/06-logo-fundo-claro-400.webp"}
+                src={theme === 'dark' ? "/assets/image/escuro/06-logo-fundo-escuro-400.webp" : "/assets/image/claro/06-logo-fundo-claro-400.webp"}
                 srcSet={theme === 'dark' ? `
-                  /assets/image/escuro/05-logo-fundo-escuro-400.webp 400w,
-                  /assets/image/escuro/05-logo-fundo-escuro-800.webp 800w,
-                  /assets/image/escuro/05-logo-fundo-escuro-1000.webp 1000w
+                  /assets/image/escuro/06-logo-fundo-escuro-400.webp 400w,
+                  /assets/image/escuro/06-logo-fundo-escuro-800.webp 800w,
+                  /assets/image/escuro/06-logo-fundo-escuro-1000.webp 1000w
                 ` : `
                   /assets/image/claro/06-logo-fundo-claro-400.webp 400w,
                   /assets/image/claro/06-logo-fundo-claro-800.webp 800w,
