@@ -51,7 +51,7 @@ export default function CallToAction() {
 
             {/* Download button */}
             <a 
-              href="https://play.google.com" 
+              href="https://play.google.com/store/apps/details?id=br.com.fabriciolima.momentus" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-12 py-6 bg-white text-accent-light dark:text-accent-dark text-xl font-bold rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
