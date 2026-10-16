@@ -1,15 +1,11 @@
 import { ArrowDown } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
 import { useTheme } from '../hooks/useTheme';
 
 export default function Hero() {
   const theme = useTheme();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
-      <div className="absolute top-4 right-4 z-20">
-        <ThemeToggle />
-      </div>
+    <section id="top" className="relative min-h-screen flex items-center justify-center px-6 pt-28 pb-20 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-light/10 dark:bg-accent-dark/10 rounded-full blur-3xl animate-pulse"></div>
