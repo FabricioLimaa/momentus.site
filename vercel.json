@@ -2,23 +2,7 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/app",
-      "destination": "/app/index.html"
-    },
-    {
-      "source": "/app/login",
-      "destination": "/app/login.html"
-    },
-    {
-      "source": "/app/signup",
-      "destination": "/app/signup.html"
-    },
-    {
-      "source": "/app/:path*",
-      "destination": "/app/:path*.html"
-    },
-    {
-      "source": "/((?!app|_expo|assets).*)$",
+      "source": "/((?!assets).*)$",
       "destination": "/index.html"
     }
   ]
