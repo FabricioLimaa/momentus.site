@@ -72,6 +72,17 @@ export default function Login() {
                     <CheckCircle2 size={13} className="text-accent-light dark:text-accent-dark" /> Sincronização em Nuvem
                   </span>
                 </div>
+
+                <div className="mt-4 pt-3 border-t border-gray-200/60 dark:border-white/10 flex items-center justify-between">
+                  <a
+                    href="/app/login"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent-light dark:bg-accent-dark text-slate-900 font-bold text-xs shadow-md hover:scale-105 transition-all"
+                  >
+                    <span>Abrir Momentus Web</span>
+                    <ExternalLink size={13} />
+                  </a>
+                  <span className="text-[11px] text-gray-500 dark:text-gray-400">Sem instalação</span>
+                </div>
               </div>
             </div>
           </div>
