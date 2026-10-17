@@ -32,7 +32,7 @@ Usamos seus dados estritamente para:
 NÃO vendemos ou alugamos seus dados. Seus dados são compartilhados apenas com a infraestrutura do Google (Firebase, Google Cloud) para fins de autenticação, armazenamento e integração com a agenda.
 
 5. Seus Direitos (LGPD)
-Você tem o direito de acessar, corrigir e eliminar seus dados. Para exercer esses direitos, entre em contato pelo e-mail: [fabriciodacostalima@gmail.com]. A exclusão da sua conta no aplicativo removerá todos os seus dados.
+Você tem o direito de acessar, corrigir e eliminar seus dados. Para exercer esses direitos, entre em contato pelo e-mail: contato@momentusapp.com.br. A exclusão da sua conta no aplicativo removerá todos os seus dados.
 
 6. Alterações a Esta Política
 Podemos atualizar esta política periodicamente. Notificaremos sobre quaisquer alterações publicando a nova versão nesta página.
@@ -73,7 +73,7 @@ We use your data strictly to:
 We DO NOT sell or rent your data. Your data is shared only with Google's infrastructure (Firebase, Google Cloud) for authentication, storage, and calendar integration.
 
 5. Your Rights
-You have the right to access, correct, and delete your data. To exercise these rights, contact us at: [fabriciodacostalima@gmail.com]. Deleting your in-app account will remove all your data.
+You have the right to access, correct, and delete your data. To exercise these rights, contact us at: contato@momentusapp.com.br. Deleting your in-app account will remove all your data.
 
 6. Changes to This Policy
 We may update this policy periodically. We will notify you of any changes by posting the new version on this page.

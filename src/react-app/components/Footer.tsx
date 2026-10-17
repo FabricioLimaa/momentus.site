@@ -52,7 +52,7 @@ export default function Footer() {
             <Link to="/license" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300">
               Licença
             </Link>
-            <a href="mailto:contato@momentus.app" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300">
+            <a href="mailto:contato@momentusapp.com.br" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300">
               Contato
             </a>
           </div>
