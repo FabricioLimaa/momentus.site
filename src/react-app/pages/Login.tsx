@@ -1,11 +1,75 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Globe, Smartphone, ArrowRight, ArrowLeft } from 'lucide-react';
+import { Globe, Smartphone, ArrowRight, ArrowLeft, Download } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
+
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=br.com.fabriciolima.momentus';
+const WEB_APP_URL = 'https://app.momentusapp.com.br/login';
 
 export default function Login() {
   const theme = useTheme();
   const isDark = theme === 'dark';
+
+  const { appUrl, platformInfo } = useMemo(() => {
+    if (typeof window === 'undefined') {
+      return {
+        appUrl: WEB_APP_URL,
+        platformInfo: 'Web ou Mobile',
+      };
+    }
+
+    const ua = navigator.userAgent || '';
+    const isAndroid = /Android/i.test(ua);
+    const isIOS = /iPhone|iPad|iPod/i.test(ua);
+
+    if (isAndroid) {
+      // Intent nativo para Android: abre o app via scheme; se não encontrar, direciona para a Play Store onde tem o botão 'Abrir'
+      const intentUrl = `intent://login#Intent;scheme=momentus;package=br.com.fabriciolima.momentus;S.browser_fallback_url=${encodeURIComponent(PLAY_STORE_URL)};end`;
+      return {
+        appUrl: intentUrl,
+        platformInfo: 'No celular Android',
+      };
+    }
+
+    if (isIOS) {
+      return {
+        appUrl: 'momentus://login',
+        platformInfo: 'No iPhone ou iPad',
+      };
+    }
+
+    return {
+      appUrl: WEB_APP_URL,
+      platformInfo: 'Acessar no computador',
+    };
+  }, []);
+
+  const handleOpenApp = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const ua = navigator.userAgent || '';
+    const isIOS = /iPhone|iPad|iPod/i.test(ua);
+    const isAndroid = /Android/i.test(ua);
+
+    // Se estiver no iOS, faz a tentativa do scheme com fallback inteligente caso o app não esteja instalado
+    if (isIOS) {
+      e.preventDefault();
+      const start = Date.now();
+      window.location.href = 'momentus://login';
+      setTimeout(() => {
+        if (document.hidden || Date.now() - start > 2200) return;
+        window.location.href = WEB_APP_URL;
+      }, 1500);
+      return;
+    }
+
+    // Se não for mobile (Desktop / PC), direciona diretamente para o Web App
+    if (!isAndroid && !isIOS) {
+      e.preventDefault();
+      window.location.href = WEB_APP_URL;
+      return;
+    }
+
+    // No Android, deixa a navegação nativa do link disparar o intent:// diretamente sem bloqueio do navegador
+  };
 
   return (
     <div className="min-h-screen pt-28 pb-16 px-6 flex items-center justify-center relative overflow-hidden bg-primary-light dark:bg-primary-dark transition-colors duration-300">
@@ -51,7 +115,7 @@ export default function Login() {
         <div className="space-y-4">
           {/* Opção 1: Web App */}
           <a
-            href="https://app.momentusapp.com.br/login"
+            href={WEB_APP_URL}
             className="group flex items-center justify-between p-4 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-accent-light dark:hover:border-accent-dark hover:shadow-lg hover:shadow-accent-light/10 transition-all duration-300"
           >
             <div className="flex items-center gap-3.5">
@@ -70,9 +134,10 @@ export default function Login() {
             <ArrowRight size={18} className="text-gray-400 group-hover:text-accent-light dark:group-hover:text-accent-dark group-hover:translate-x-1 transition-all" />
           </a>
 
-          {/* Opção 2: App Mobile Instalado */}
+          {/* Opção 2: App Mobile Instalado com fallback inteligente */}
           <a
-            href="momentus://login"
+            href={appUrl}
+            onClick={handleOpenApp}
             className="group flex items-center justify-between p-4 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-secondary-light dark:hover:border-secondary-dark hover:shadow-lg hover:shadow-secondary-light/10 transition-all duration-300"
           >
             <div className="flex items-center gap-3.5">
@@ -84,7 +149,7 @@ export default function Login() {
                   Abrir no Aplicativo
                 </h2>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
-                  Se já instalado no celular
+                  {platformInfo}
                 </p>
               </div>
             </div>
@@ -95,11 +160,12 @@ export default function Login() {
         {/* Botão de Download Google Play */}
         <div className="mt-8">
           <a
-            href="https://play.google.com/store/apps/details?id=br.com.fabriciolima.momentus"
+            href={PLAY_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-3.5 px-6 rounded-full bg-gradient-to-r from-accent-light to-secondary-light dark:from-accent-dark dark:to-secondary-dark text-white font-bold text-center block text-sm shadow-md hover:scale-[1.02] transition-transform duration-200"
+            className="w-full py-3.5 px-6 rounded-full bg-gradient-to-r from-accent-light to-secondary-light dark:from-accent-dark dark:to-secondary-dark text-white font-bold text-center flex items-center justify-center gap-2 text-sm shadow-md hover:scale-[1.02] transition-transform duration-200"
           >
+            <Download size={16} />
             Baixar no Google Play
           </a>
         </div>
