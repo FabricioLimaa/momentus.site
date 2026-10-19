@@ -23,12 +23,11 @@ export default function Login() {
     const isIOS = /iPhone|iPad|iPod/i.test(ua);
 
     if (isAndroid) {
-      // Intent nativo para abrir diretamente a MainActivity do app nativo já instalado (br.com.fabriciolima.momentus)
-      // Utiliza ACTION_MAIN e CATEGORY_LAUNCHER com o componente da MainActivity nativa
+      // Intent nativo com fallback para a Google Play Store
       const intentUrl = `intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=br.com.fabriciolima.momentus;component=br.com.fabriciolima.momentus/.ui.screens.MainActivity;S.browser_fallback_url=${encodeURIComponent(PLAY_STORE_URL)};end`;
       return {
         appUrl: intentUrl,
-        platformInfo: 'Abrir app nativo instalado',
+        platformInfo: 'No celular ou tablet',
       };
     }
 
