@@ -4,7 +4,7 @@ import { Globe, Smartphone, ArrowRight, ArrowLeft, Download } from 'lucide-react
 import { useTheme } from '../hooks/useTheme';
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=br.com.fabriciolima.momentus';
-const WEB_APP_URL = 'https://app.momentusapp.com.br/login';
+const WEB_APP_URL = 'https://app.momentusapp.com.br/';
 
 export default function Login() {
   const theme = useTheme();
