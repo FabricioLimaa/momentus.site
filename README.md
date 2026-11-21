@@ -6,9 +6,9 @@ Portal oficial de apresentação e landing page do ecossistema **Momentus**.
 
 - **Nome do App:** Momentus
 - **Desenvolvido por:** Fabricio Lima
-- **E-mail Oficial:** [contato@momentusapp.com.br](mailto:contato@momentusapp.com.br)
-- **Site Oficial:** [https://www.momentusapp.com.br/](https://www.momentusapp.com.br/)
-- **Acesso Web (App):** [https://app.momentusapp.com.br/](https://app.momentusapp.com.br/)
+- **E-mail Oficial:** [contato@momentus.app.br](mailto:contato@momentus.app.br)
+- **Site Oficial:** [https://www.momentus.app.br/](https://www.momentus.app.br/)
+- **Acesso Web (App):** [https://app.momentus.app.br/](https://app.momentus.app.br/)
 
 ## Tecnologias
 
