@@ -78,10 +78,10 @@ export default function Navbar() {
 
           <Link
             to="/login"
-            className="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-accent-light to-secondary-light dark:from-accent-dark dark:to-secondary-dark text-white font-bold text-sm shadow-md hover:shadow-accent-light/40 dark:hover:shadow-accent-dark/40 hover:scale-105 transition-all duration-300"
+            className="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-accent-light to-secondary-light dark:from-accent-dark dark:to-secondary-dark text-white dark:text-slate-950 font-extrabold text-sm shadow-md hover:shadow-accent-light/40 dark:hover:shadow-accent-dark/40 hover:scale-105 transition-all duration-300"
           >
             <LogIn size={16} />
-            <span>Entrar / Login</span>
+            <span>Acessar App</span>
           </Link>
         </div>
 
@@ -124,10 +124,10 @@ export default function Navbar() {
               <Link
                 to="/login"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-accent-light to-secondary-light dark:from-accent-dark dark:to-secondary-dark text-white font-bold text-base shadow-md"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-accent-light to-secondary-light dark:from-accent-dark dark:to-secondary-dark text-white dark:text-slate-950 font-extrabold text-base shadow-md"
               >
                 <LogIn size={18} />
-                <span>Entrar no Momentus</span>
+                <span>Acessar App</span>
               </Link>
             </div>
           </div>

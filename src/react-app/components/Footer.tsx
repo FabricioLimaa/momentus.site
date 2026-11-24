@@ -6,13 +6,13 @@ export default function Footer() {
   const theme = useTheme();
 
   return (
-    <footer className="relative py-12 px-6 border-t border-highlight-light/10 dark:border-highlight-dark/10 bg-primary-light dark:bg-primary-dark">
+    <footer className="relative py-12 px-6 border-t border-slate-200 dark:border-slate-800 bg-primary-light dark:bg-primary-dark transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo and tagline */}
           <div className="text-center md:text-left">
             <div className="flex items-center gap-3 justify-center md:justify-start mb-2">
-              <img 
+              <img
                 src={theme === 'dark' ? "/assets/image/escuro/06-logo-fundo-escuro-400.webp" : "/assets/image/claro/06-logo-fundo-claro-400.webp"}
                 srcSet={theme === 'dark' ? `
                   /assets/image/escuro/06-logo-fundo-escuro-400.webp 400w,
@@ -24,43 +24,51 @@ export default function Footer() {
                   /assets/image/claro/06-logo-fundo-claro-1000.webp 1000w
                 `}
                 sizes="2.5rem"
-                alt="Momentus" 
+                alt="Momentus"
                 className="w-10 h-10 rounded-full"
                 loading="lazy"
                 width="40"
                 height="40"
               />
-              <span className="text-2xl font-bold text-highlight-light dark:text-highlight-dark">Momentus</span>
+              <span className="text-2xl font-black text-highlight-light dark:text-highlight-dark">Momentus</span>
             </div>
-            <p className="text-gray-500 dark:text-gray-400">Organize suas metas, conquiste seu dia.</p>
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              Viva o presente. Domine sua rotina.
+            </p>
           </div>
 
           {/* Links */}
-          <div className="flex flex-wrap justify-center gap-8 text-gray-500 dark:text-gray-400">
-            <a href="#features" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-sm font-medium text-slate-600 dark:text-slate-400">
+            <a href="https://app.momentus.app.br/" className="text-accent-light dark:text-accent-dark font-bold hover:underline">
+              Acessar App Web
+            </a>
+            <a href="#features" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">
               Funcionalidades
             </a>
-            <a href="#download" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300">
+            <a href="#screenshots" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">
+              Telas
+            </a>
+            <a href="#download" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">
               Download
             </a>
-            <Link to="/privacy-policy" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300">
+            <Link to="/privacy-policy" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">
               Política de Privacidade
             </Link>
-            <Link to="/terms" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300">
+            <Link to="/terms" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">
               Termos e Condições
             </Link>
-            <Link to="/license" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300">
+            <Link to="/license" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">
               Licença
             </Link>
-            <a href="mailto:contato@momentus.app.br" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300">
-              Contato
+            <a href="mailto:contato@momentus.app.br" className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">
+              contato@momentus.app.br
             </a>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-highlight-light/10 dark:border-highlight-dark/10 text-center text-gray-500 dark:text-gray-400">
-          <p>© {currentYear} Momentus. Todos os direitos reservados.</p>
+        <div className="mt-10 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-400">
+          <p>© {currentYear} Momentus • Desenvolvido por Fabricio Lima. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

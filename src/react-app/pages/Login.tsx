@@ -163,7 +163,7 @@ export default function Login() {
             href={PLAY_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-3.5 px-6 rounded-full bg-gradient-to-r from-accent-light to-secondary-light dark:from-accent-dark dark:to-secondary-dark text-white font-bold text-center flex items-center justify-center gap-2 text-sm shadow-md hover:scale-[1.02] transition-transform duration-200"
+            className="w-full py-3.5 px-6 rounded-full bg-gradient-to-r from-accent-light to-secondary-light dark:from-accent-dark dark:to-secondary-dark text-white dark:text-slate-950 font-extrabold text-center flex items-center justify-center gap-2 text-sm shadow-md hover:scale-[1.02] transition-transform duration-200"
           >
             <Download size={16} />
             Baixar no Google Play

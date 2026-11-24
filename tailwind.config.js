@@ -12,20 +12,24 @@ export default {
       },
       colors: {
         primary: {
-          light: "#e6e6e6",
-          dark: "#012661",
+          light: "#F8FAFC",
+          dark: "#0F172A",
+        },
+        surface: {
+          light: "#FFFFFF",
+          dark: "#1E293B",
         },
         secondary: {
-          light: "#26999f",
-          dark: "#26999f",
+          light: "#0284C7",
+          dark: "#38BDF8",
         },
         accent: {
-          light: "#41e295",
-          dark: "#41e295",
+          light: "#10B981",
+          dark: "#34D399",
         },
         highlight: {
-          light: "#012661",
-          dark: "#e6e6e6",
+          light: "#0F172A",
+          dark: "#F8FAFC",
         },
       },
     },

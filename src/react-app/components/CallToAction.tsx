@@ -1,68 +1,80 @@
-import { Smartphone, Star } from 'lucide-react';
+import { Globe, ShieldCheck, Cloud, Sparkles, ArrowRight } from 'lucide-react';
+
+const WEB_APP_URL = 'https://app.momentus.app.br/';
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=br.com.fabriciolima.momentus';
 
 export default function CallToAction() {
   return (
-    <section id="download" className="relative py-32 px-6 bg-primary-light dark:bg-primary-dark">
+    <section
+      id="download"
+      className="relative py-24 md:py-32 px-6 bg-primary-light dark:bg-primary-dark transition-colors duration-300"
+    >
       <div className="max-w-5xl mx-auto">
-        <div className="relative bg-gradient-to-br from-accent-light to-secondary-light dark:from-accent-dark dark:to-secondary-dark rounded-[3rem] p-12 md:p-16 shadow-2xl overflow-hidden">
-          {/* Background pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        <div className="relative bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950 dark:from-surface-dark dark:via-slate-900 dark:to-emerald-950/90 rounded-[2.5rem] p-10 md:p-16 shadow-2xl border border-emerald-500/25 overflow-hidden">
+          {/* Background glow */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute -top-20 -right-20 w-80 h-80 bg-accent-dark/20 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-secondary-dark/20 rounded-full blur-3xl"></div>
           </div>
 
           <div className="relative z-10 text-center">
-            {/* Icon */}
-            <div className="inline-flex p-6 bg-white/20 rounded-3xl mb-8 backdrop-blur-sm">
-              <Smartphone className="w-16 h-16 text-white" />
-            </div>
+            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest bg-accent-dark/15 text-accent-dark border border-accent-dark/30 mb-6">
+              Comece gratuitamente hoje
+            </span>
 
             {/* Title */}
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-5 tracking-tight">
               Pronto para Transformar Sua Rotina?
             </h2>
 
             {/* Description */}
-            <p className="text-xl text-gray-100 dark:text-gray-200 mb-10 max-w-2xl mx-auto">
-              Junte-se a milhares de usuários que já estão alcançando seus objetivos com o Momentus
+            <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+              Use direto no navegador em qualquer computador ou instale no seu celular Android com sincronização automática em nuvem.
             </p>
 
-            {/* Stats */}
-            <div className="flex flex-wrap justify-center gap-8 mb-12">
-              <div className="text-center">
-                <div className="flex items-center justify-center gap-1 mb-2">
-                  <Star className="w-6 h-6 text-yellow-300 fill-yellow-300" />
-                  <Star className="w-6 h-6 text-yellow-300 fill-yellow-300" />
-                  <Star className="w-6 h-6 text-yellow-300 fill-yellow-300" />
-                  <Star className="w-6 h-6 text-yellow-300 fill-yellow-300" />
-                  <Star className="w-6 h-6 text-yellow-300 fill-yellow-300" />
-                </div>
-                <p className="text-white font-semibold">Avaliação 5.0</p>
+            {/* Honest Value Highlights */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto mb-12">
+              <div className="flex items-center justify-center gap-2.5 px-4 py-3 rounded-2xl bg-white/5 border border-white/10 text-slate-200 text-sm font-semibold">
+                <Cloud className="w-5 h-5 text-accent-dark shrink-0" />
+                <span>Web & Mobile em Nuvem</span>
               </div>
-              <div className="text-center">
-                <p className="text-4xl font-black text-white mb-2">10k+</p>
-                <p className="text-gray-100 dark:text-gray-200">Downloads</p>
+              <div className="flex items-center justify-center gap-2.5 px-4 py-3 rounded-2xl bg-white/5 border border-white/10 text-slate-200 text-sm font-semibold">
+                <ShieldCheck className="w-5 h-5 text-secondary-dark shrink-0" />
+                <span>Criptografia AES-256</span>
               </div>
-              <div className="text-center">
-                <p className="text-4xl font-black text-white mb-2">95%</p>
-                <p className="text-gray-100 dark:text-gray-200">Satisfação</p>
+              <div className="flex items-center justify-center gap-2.5 px-4 py-3 rounded-2xl bg-white/5 border border-white/10 text-slate-200 text-sm font-semibold">
+                <Sparkles className="w-5 h-5 text-accent-dark shrink-0" />
+                <span>Sem Anúncios • Modo Zen</span>
               </div>
             </div>
 
-            {/* Download button */}
-            <a 
-              href="https://play.google.com/store/apps/details?id=br.com.fabriciolima.momentus" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-12 py-6 bg-white text-accent-light dark:text-accent-dark text-xl font-bold rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-            >
-              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
-              </svg>
-              Disponível no Google Play
-            </a>
+            {/* Dual Multiplatform CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={WEB_APP_URL}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-9 py-4 bg-gradient-to-r from-accent-dark to-secondary-dark text-slate-950 text-base sm:text-lg font-extrabold rounded-full shadow-xl hover:scale-[1.03] transition-all duration-300"
+              >
+                <Globe className="w-5 h-5" />
+                <span>Abrir App Web Agora</span>
+                <ArrowRight className="w-5 h-5" />
+              </a>
 
-            <p className="text-gray-100 dark:text-gray-200 mt-6">Versão Android • Gratuito</p>
+              <a
+                href={PLAY_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-9 py-4 bg-white text-slate-900 text-base sm:text-lg font-extrabold rounded-full shadow-xl hover:scale-[1.03] transition-all duration-300"
+              >
+                <svg className="w-6 h-6 text-emerald-600" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                </svg>
+                <span>Baixar no Google Play</span>
+              </a>
+            </div>
+
+            <p className="text-slate-400 text-sm mt-6 font-medium">
+              Disponível na Web (app.momentus.app.br) e Android • Versão iOS em desenvolvimento
+            </p>
           </div>
         </div>
       </div>
